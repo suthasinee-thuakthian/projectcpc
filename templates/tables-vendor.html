@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SB Admin 2 - Blank</title>
+
+  <!-- Custom fonts for this template-->
+
+  {% block headjs %}
+  {% include "base/headjs.html" %}
+  {% endblock %}
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    {% block Sidebar %}
+    {% include "base/sidebar.html" %}
+    {% endblock %}
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        {% block navbar %}
+        {% include "base/navbar.html" %}
+        {% endblock %}
+        <!-- End of Topbar -->
+
+
+
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Vendor</h1>
+          <p class="mb-4">ข้อมูลผู้ขายสินค้า<a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
+
+        <!-- /.container-fluid -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>FirstName</th>
+                      <th>LastName</th>
+                      <th>Phone</th>
+                      <th>Address</th>
+                      <th>Province</th>
+                      <th>Postcode</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                  </tfoot>
+                  <tbody>
+                    {% for row in rows %}
+                    <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                      <td>{{row[3]}}</td>
+                      <td>{{row[4]}}</td>
+                      <td>{{row[5]}}</td>
+                      <td>{{row[6]}}</td>
+                    </tr>
+                  {% endfor %}
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+      <!-- End of Main Content -->
+
+
+
+
+
+
+
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+
+
+  <!-- Logout Modal-->
+  {% block logout %}
+  {% include "base/logout.html" %}
+  {% endblock %}
+
+  <!-- Bootstrap core JavaScript-->
+  {% block endjs %}
+  {% include "base/endjs.html" %}
+  {% endblock %}
+
+</body>
+
+</html>
